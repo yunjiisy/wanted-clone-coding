@@ -1,6 +1,6 @@
 'use client'
 import styled from '@emotion/styled'
-import Image from 'next/image'
+// import Image from 'next/image'
 import SvgIcon from '@mui/material/SvgIcon'
 import MenuIcon from '@mui/icons-material/Menu'
 const Wrapper = styled.div`
