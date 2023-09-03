@@ -8,6 +8,7 @@ import MainBar from './components/commons/layout/header/mainbar'
 import NavBar from './components/commons/layout/header/navbar'
 import SearchButton from './components/commons/layout/header/searchButton'
 import SignupButton from './components/commons/layout/header/signupButton'
+import { ModalProvider } from './modal/modal-context-ex'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,20 +25,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>layout.tsx시작 !!----------</div>
-        <div className="ml-14 mr-14">
-          <div className="flex flex-row justify-between">
-            <MainBar></MainBar>
-            <NavBar></NavBar>
-            <SignupButton></SignupButton>
-            <SearchButton></SearchButton>
+        <ModalProvider>
+          <div>layout.tsx시작 !!----------</div>
+          <div className="ml-14 mr-14">
+            <div className="flex flex-row justify-between">
+              <MainBar></MainBar>
+              <NavBar></NavBar>
+              <SignupButton></SignupButton>
+              <SearchButton></SearchButton>
+            </div>
           </div>
-        </div>
-        <Banner></Banner>
-        {children}
-        <LayoutFooter></LayoutFooter>
+          <Banner></Banner>
+          {children}
+          <LayoutFooter></LayoutFooter>
 
-        <div>layout.tsx마지막 !----------</div>
+          <div>layout.tsx마지막 !----------</div>
+        </ModalProvider>
       </body>
     </html>
   )
