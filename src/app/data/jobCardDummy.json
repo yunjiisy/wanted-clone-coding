@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "position": "Item 1",
+      "companyName": "카카오",
+      "response-leel": "high",
+      "location": "seoul, korea",
+      "reward": "100만원",
+      "growing": "true",
+      "canworkathome": "true",
+      "salary": "1k"
+    },
+    {
+      "id": 2,
+      "position": "Item 1",
+      "companyName": "카카오",
+      "response-leel": "high",
+      "location": "seoul, korea",
+      "reward": "100만원",
+      "growing": "true",
+      "canWorkAtHome": "true",
+      "salary": "1k"
+    },
+    {
+      "id": 3,
+      "position": "Item 1",
+      "companyName": "카카오",
+      "response-leel": "high",
+      "location": "seoul, korea",
+      "reward": "100만원",
+      "growing": "true",
+      "canworkathome": "true",
+      "salary": "1k"
+    },
+    {
+      "id": 4,
+      "position": "Item 1",
+      "companyName": "카카오",
+      "response-leel": "high",
+      "location": "seoul, korea",
+      "reward": "100만원",
+      "growing": "true",
+      "canworkathome": "true",
+      "salary": "1k"
+    },
+    {
+      "id": 5,
+      "position": "Item 1",
+      "companyName": "카카오",
+      "response-leel": "high",
+      "location": "seoul, korea",
+      "reward": "100만원",
+      "growing": "true",
+      "canworkathome": "true",
+      "salary": "1k"
+    }
+  ]
+}

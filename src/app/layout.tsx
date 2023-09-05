@@ -2,13 +2,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Banner from './components/units/banner'
 import LayoutFooter from './components/commons/layout/footer/footer'
 import MainBar from './components/commons/layout/header/mainbar'
 import NavBar from './components/commons/layout/header/navbar'
 import SearchButton from './components/commons/layout/header/searchButton'
 import SignupButton from './components/commons/layout/header/signupButton'
-import { ModalProvider } from './modal/modal-context-ex'
+import { ModalProvider } from './components/commons/modal/modal-context-ex'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +25,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ModalProvider>
-          <div>layout.tsx시작 !!----------</div>
           <div className="ml-14 mr-14">
             <div className="flex flex-row justify-between">
               <MainBar></MainBar>
@@ -35,11 +33,8 @@ export default function RootLayout({
               <SearchButton></SearchButton>
             </div>
           </div>
-          <Banner></Banner>
           {children}
           <LayoutFooter></LayoutFooter>
-
-          <div>layout.tsx마지막 !----------</div>
         </ModalProvider>
       </body>
     </html>

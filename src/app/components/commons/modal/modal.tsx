@@ -68,36 +68,3 @@ export default function Modal() {
     )
   }
 }
-
-// const Modal = (props: any) => {
-//   const { modalInfo, dispatch } = useModal();
-
-//   const handleConfirm = () => {
-//     if (modalInfo.onConfirm) {
-//       modalInfo.onConfirm();
-//     }
-//     dispatch({ type: "Invisible" });
-//   };
-
-//   const handleCancel = () => {
-//     if (modalInfo.onCancel) {
-//       modalInfo.onCancel();
-//     }
-//     dispatch({ type: "Invisible" });
-//   };
-
-//   if (!modalInfo.isVisible) {
-//     return null;
-//   }
-
-//   return (
-//     <div className="modal">
-//       <h2>{modalInfo.title}</h2>
-//       <p>{modalInfo.content}</p>
-//       {modalInfo.useConfirm && <button onClick={handleConfirm}>확인</button>}
-//       {modalInfo.useCancel && <button onClick={handleCancel}>취소</button>}
-//     </div>
-//   );
-// };
-
-// export default Modal;

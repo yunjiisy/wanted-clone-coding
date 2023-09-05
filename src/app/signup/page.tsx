@@ -3,8 +3,8 @@ import React, { useState, useRef } from 'react'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import styled from '@emotion/styled'
-import { useModal } from '../modal/modal-context-ex'
-import Modal from '../modal/modal'
+import { useModal } from '../components/commons/modal/modal-context-ex'
+import Modal from '../components/commons/modal/modal'
 
 const StyledDiv = styled('div')({
   display: 'flex',
@@ -13,8 +13,13 @@ const StyledDiv = styled('div')({
   margin: 30,
   padding: 30,
 })
+const StyledTextField = styled(TextField)({
+  '& .MuiOutlinedInput-root': {
+    margin: 1,
+  },
+})
 
-const SignUpP: React.FC = () => {
+const SignUpPage: React.FC = () => {
   const [Id, setId] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [email, setEmail] = useState<string>('')
@@ -22,10 +27,18 @@ const SignUpP: React.FC = () => {
   const emailRef = useRef<HTMLInputElement>(null)
   const { dispatch } = useModal()
 
-  const SignupValidation = () => {
+  const validatePassword = (password: string) => {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/
+    return password.match(passwordRegex) !== null
+  }
 
-    if (password.match(passwordRegex) == null) {
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return email.match(emailRegex) !== null
+  }
+
+  const SignupValidation = () => {
+    if (!validatePassword(password)) {
       passwordRef.current?.focus()
       setPassword('')
       dispatch({
@@ -43,8 +56,7 @@ const SignUpP: React.FC = () => {
       return
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (email.match(emailRegex) == null) {
+    if (!validateEmail(email)) {
       setEmail('')
       dispatch({
         type: 'Visible',
@@ -74,12 +86,7 @@ const SignUpP: React.FC = () => {
   return (
     <StyledDiv>
       <h1>회원가입</h1>
-      <TextField
-        sx={{
-          ' .MuiOutlinedInput-root': {
-            margin: 1,
-          },
-        }}
+      <StyledTextField
         label="id"
         value={Id}
         onChange={(e) => {
@@ -87,12 +94,7 @@ const SignUpP: React.FC = () => {
         }}
         variant="outlined"
       />
-      <TextField
-        sx={{
-          ' .MuiOutlinedInput-root': {
-            margin: 1,
-          },
-        }}
+      <StyledTextField
         label="password"
         type="password"
         value={password}
@@ -102,13 +104,8 @@ const SignUpP: React.FC = () => {
         variant="outlined"
         inputRef={passwordRef}
       />
-      <TextField
-        sx={{
-          ' .MuiOutlinedInput-root': {
-            margin: 1,
-          },
-        }}
-        label="wmail"
+      <StyledTextField
+        label="email"
         type="email"
         value={email}
         onChange={(e) => {
@@ -133,4 +130,4 @@ const SignUpP: React.FC = () => {
   )
 }
 
-export default SignUpP
+export default SignUpPage
