@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import AbcIcon from '@mui/icons-material/Abc'
 import styles from './carousel.module.scss'
