@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "id": 14,
+      "position": "안드로이드 개발자 (신입)",
+      "image": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F258%2Fmmmmy6niam0xgpyc__1080_790.png&w=1000&q=75",
+      "companyName": "오토워니",
+      "response": "응답률 높음",
+      "location": "서울, 한국",
+      "reward1": "500,000",
+      "reward2": "500,000",
+      "growing": "true"
+    },
+    {
+      "id": 15,
+      "position": "백엔드 엔지니어(Global)",
+      "image": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F5%2Fpcufn5hokw5zrpwf__1080_790.jpg&w=1000&q=75",
+      "companyName": "라디",
+      "response": "응답률 높음",
+      "location": "서울, 한국",
+      "reward1": "500,000",
+      "reward2": "500,000",
+      "growing": "true"
+    },
+    {
+      "id": 3,
+      "position": "[야놀자에프앤비솔루션] Software Engineer, Back-end)",
+      "image": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F52%2F17418_2_0.abfaf8d8__1080_790.jpg&w=1000&q=75",
+      "companyName": "야놀자Tech(R&D",
+      "response": "응답률 평균 이상",
+      "location": "서울, 한국",
+      "reward1": "500,000",
+      "reward2": "500,000",
+      "growing": "true"
+    },
+    {
+      "id": 6,
+      "position": "Research Engineer(Synthetic Data&AI)",
+      "image": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F7148%2Fgckl9uu1hs9qs98b__1080_790.jpg&w=1000&q=75",
+      "companyName": "모라이(MORAI)",
+      "response": "응답률 매우 높음",
+      "location": "서울, 한국",
+      "reward1": "500,000",
+      "reward2": "500,000",
+      "growing": "true"
+    },
+    {
+      "id": 1,
+      "position": "개발자(FE)",
+      "image": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F39456%2Fmfmgreberqaxft5o__1080_790.jpg&w=1000&q=75",
+      "companyName": "새벽네시",
+      "response": "응답률 매우 높음",
+      "location": "서울, 한국",
+      "reward1": "500,000",
+      "reward2": "500,000",
+      "growing": "true"
+    },
+    {
+      "id": 9,
+      "position": "소셜카지노 서버개발자",
+      "image": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F10695%2Fedxajluizwuszu30__1080_790.jpg&w=1000&q=75",
+      "companyName": "잼팟",
+      "response": "응답률 매우 높음",
+      "location": "서울, 한국",
+      "reward1": "500,000",
+      "reward2": "500,000",
+      "growing": "true"
+    },
+    {
+      "id": 10,
+      "position": "추천 엔지니어",
+      "image": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F15%2F28xctz9hah8ba7q4__1080_790.jpg&w=1000&q=75",
+      "companyName": "크래프톤",
+      "response": "응답률 매우 높음",
+      "location": "서울, 한국",
+      "reward1": "500,000",
+      "reward2": "500,000",
+      "growing": "true"
+    },
+    {
+      "id": 13,
+      "position": "[Project inZOI Unit] Front-end Web Programmer",
+      "image": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F8900%2Fsi96z5xdatuxzrsj__1080_790.jpg&w=1000&q=75",
+      "companyName": "엑셈",
+      "response": "응답률 평균 이상",
+      "location": "서울, 한국",
+      "reward1": "500,000",
+      "reward2": "500,000",
+      "growing": "true"
+    }
+  ]
+}
