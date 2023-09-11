@@ -1,4 +1,3 @@
-// Modal.js
 import React from 'react'
 import { useModal } from './modal-context-ex'
 import BasicModal from '@mui/material/Modal'
@@ -19,10 +18,11 @@ const style = {
 
 export default function Modal() {
   const [open, setOpen] = React.useState(true)
+  const { modalInfo, dispatch } = useModal()
+
   const handleClose = () => {
     setOpen(false)
   }
-  const { modalInfo, dispatch } = useModal()
   const handleConfirm = () => {
     console.log('모달 정보!')
     console.log(modalInfo)

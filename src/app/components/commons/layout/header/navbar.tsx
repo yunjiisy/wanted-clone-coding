@@ -1,14 +1,13 @@
 'use client'
 
-import styled from '@emotion/styled'
 import tw from 'tailwind-styled-components'
 
-const Wrapper = styled.div`
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem /* 24px */;
+const Wrapper = tw.div`
+  h-12 
+  flex 
+  items-center 
+  justify-center 
+  gap-6
 `
 
 const MenuItem = tw.a`
@@ -17,6 +16,9 @@ const MenuItem = tw.a`
   hover:border-b-2
   border-transparent
   hover:border-gray-500
+  text-sm	
+  font-medium
+
 `
 
 export default function NavBar(): JSX.Element {

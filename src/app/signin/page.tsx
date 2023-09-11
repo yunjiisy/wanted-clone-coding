@@ -64,6 +64,7 @@ const SigninPage = () => {
           <h1>로그인 성공</h1>
         </StyledDiv>
       ) : (
+        // eslint-disable-next-line @typescript-eslint/no-misused-promises
         <form onSubmit={handleSubmit(onSubmit)}>
           <StyledDiv>
             <h1>회원가입</h1>

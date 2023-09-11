@@ -25,15 +25,15 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ModalProvider>
-          <div className="ml-14 mr-14">
-            <div className="flex flex-row justify-between">
+          <div className="top-0 left-0 right-0 fixed bg-white border border-b-stone-200">
+            <div className="flex justify-around items-center ml-16 mr-16">
               <MainBar></MainBar>
               <NavBar></NavBar>
               <SignupButton></SignupButton>
               <SearchButton></SearchButton>
             </div>
           </div>
-          {children}
+          <main className="mt-14">{children}</main>
           <LayoutFooter></LayoutFooter>
         </ModalProvider>
       </body>

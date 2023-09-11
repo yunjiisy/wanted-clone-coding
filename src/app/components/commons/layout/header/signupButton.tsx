@@ -1,11 +1,12 @@
 'use client'
 
-import styled from '@emotion/styled'
+import tw from 'tailwind-styled-components'
 import Link from 'next/link'
-const Wrapper = styled.div`
-  height: 50px;
-  display: flex;
-  align-items: center;
+const Wrapper = tw.div`
+h-12 
+flex 
+items-center
+text-sm
 `
 
 export default function SignupButton(): JSX.Element {
