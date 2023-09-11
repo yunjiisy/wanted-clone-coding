@@ -3,8 +3,8 @@ import React, { useState, useRef } from 'react'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import styled from '@emotion/styled'
-import { useModal } from '../components/commons/modal/modal-context-ex'
-import Modal from '../components/commons/modal/modal'
+import { useModal } from '@/app/components/commons/modal/modal-context-ex'
+import Modal from '@/app/components/commons/modal/modal'
 
 const StyledDiv = styled('div')({
   display: 'flex',
