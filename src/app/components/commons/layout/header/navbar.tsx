@@ -1,5 +1,4 @@
 'use client'
-
 import tw from 'tailwind-styled-components'
 
 const Wrapper = tw.div`
@@ -24,8 +23,8 @@ const MenuItem = tw.a`
 export default function NavBar(): JSX.Element {
   return (
     <Wrapper>
-      <MenuItem href="#">채용</MenuItem>
-      <MenuItem href="#">이벤트</MenuItem>
+      <MenuItem href="/hire/wdlist">채용</MenuItem>
+      <MenuItem href="/event/eventlist">이벤트</MenuItem>
       <MenuItem href="#">이력서</MenuItem>
       <MenuItem href="#">소셜</MenuItem>
       <MenuItem href="#">프리랜서</MenuItem>
