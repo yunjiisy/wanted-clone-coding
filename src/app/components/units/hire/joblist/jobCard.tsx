@@ -1,4 +1,4 @@
-import React, { useEffect, type FC, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LoadingSkeleton from '@/app/components/units/skeleton/jobCardSkeleton'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,7 +8,7 @@ interface JobProps {
   tag: string
 }
 
-const JobCard: FC<JobProps> = ({ tag }) => {
+const JobCard = ({ tag }: JobProps) => {
   const [jobList, setJobList] = useState<JobList>({ items: [] })
   const [isLoading, setIsLoading] = useState(true)
 

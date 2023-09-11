@@ -1,10 +1,10 @@
-import React, { type FC } from 'react'
+import React from 'react'
 
 interface TagProps {
   onTagChange: (tagId: string) => void
 }
 
-const Filter: FC<TagProps> = ({ onTagChange }) => {
+const Filter = ({ onTagChange }: TagProps) => {
   return (
     <div className="flex gap-5 py-4 px-6 bg-white w-full">
       <button

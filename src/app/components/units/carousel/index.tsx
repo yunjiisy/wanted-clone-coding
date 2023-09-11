@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import AbcIcon from '@mui/icons-material/Abc'
 import styles from './carousel.module.scss'
 
-interface Props {
+interface CarouselProps {
   carouselList: string[]
 }
 
-const Carousel: React.FC<Props> = ({ carouselList }) => {
+const Carousel = ({ carouselList }: CarouselProps) => {
   const [currIndex, setCurrIndex] = useState(1)
   const [currList, setCurrList] = useState<string[]>()
 

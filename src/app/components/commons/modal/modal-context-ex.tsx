@@ -47,7 +47,7 @@ interface ModalProviderProps {
 }
 // provider-----------------
 
-export const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
+export const ModalProvider = ({ children }: ModalProviderProps) => {
   const [modalInfo, dispatch] = useReducer(reducer, {
     isVisible: false,
     title: '',

@@ -19,7 +19,7 @@ const StyledTextField = styled(TextField)({
   },
 })
 
-const SignUpPage: React.FC = () => {
+const SignUpPage = () => {
   const [Id, setId] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [email, setEmail] = useState<string>('')
