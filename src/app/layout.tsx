@@ -1,15 +1,12 @@
 // 'use client'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import LayoutFooter from './components/commons/layout/footer/footer'
 import MainBar from './components/commons/layout/header/mainbar'
 import NavBar from './components/commons/layout/header/navbar'
 import SearchButton from './components/commons/layout/header/searchButton'
 import SignupButton from './components/commons/layout/header/signupButton'
 import { ModalProvider } from './components/commons/modal/modal-context-ex'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Wanted',
@@ -23,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={``}>
         <ModalProvider>
           <div className="top-0 left-0 right-0 fixed bg-white border border-b-stone-200">
             <div className="flex justify-around items-center ml-16 mr-16">

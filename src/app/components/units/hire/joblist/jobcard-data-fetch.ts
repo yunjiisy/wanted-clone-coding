@@ -1,5 +1,3 @@
-// fetchData.ts
-
 export interface JobList {
   items: JobItem[]
 }

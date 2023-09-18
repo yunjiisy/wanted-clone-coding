@@ -1,5 +1,7 @@
-// import CompanyData from '../../../../public/data/jobCardDummy.json'
+// firebase 연동 완료
+// 더미데이터에서 받아왔던 부분들 firebase로부터 받아온 데이터로 바꿀 예정. (데이터 잘못 넣어놔서 수정중)
 import Image from 'next/image'
+import { fetchJobData } from '@/app/components/units/hire/joblist/jobDataFetch'
 
 interface Company {
   id: number
@@ -11,17 +13,25 @@ interface Company {
   reward2: string
 }
 
-export default function WDPage({ params }: { params: { id: string } }) {
+export default async function WDPage({ params }: { params: { id: string } }) {
   const wdid = params.id
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const data = require('../../../../public/data/jobCardDummy.json')
+  const data2 = await fetchJobData(wdid)
+
+  console.log('-------------------~~~~~~~~~~')
+  console.log(data2)
 
   // wdid에 해당하는 기업 정보 찾기
   const recruitment: Company | undefined = data.items.find(
     (item: Company) => item.id === Number(wdid),
   )
+  console.log(recruitment)
 
   if (recruitment == null) {
+    return <div>해당 기업을 찾을 수 없습니다.</div>
+  }
+  if (data2 == null) {
     return <div>해당 기업을 찾을 수 없습니다.</div>
   }
 
@@ -32,6 +42,7 @@ export default function WDPage({ params }: { params: { id: string } }) {
         <h2 className="mt-2 text-2xl font-medium mb-3">
           {recruitment.position}
         </h2>
+        <h2 className="mt-2 text-2xl font-medium mb-3">{data2.position}</h2>
         <p className="mb-1 text-medium font-base">{recruitment.companyName}</p>
         <p className="mb-5 text-sm font-light text-slate-600	">
           {recruitment.location}

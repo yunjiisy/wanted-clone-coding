@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { fetchJobData, type JobList, type JobItem } from './jobcard-data-fetch' // Import the fetchData function
 
 interface JobProps {
-  tag: string
+  tag: string | null
 }
 
 const JobCard = ({ tag }: JobProps) => {
