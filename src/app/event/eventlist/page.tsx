@@ -1,17 +1,6 @@
 import ProductList from '@/app/components/units/event/productList'
 import React from 'react'
 
-// async function getData() {
-//   const res = await fetch('../../../public/data/jobCardDummy1.json')
-//   if (!res.ok) {
-//     throw new Error('Failed to fetch data')
-//   }
-//   return await res.json()
-// }
-// public directory로 부터 데이터를 패치해오려니까 안됐음 클라이언트에서는 됨
-// 근데 다음과 같이 서버에서 하려니까 안됨.  서버에서는 서버패치만 되는거같음
-// const res = await import('../../../public/data/jobEvent.json')  -> 이런식으로 하면 되긴한다고 함.
-
 // ssg
 
 export default async function Event() {

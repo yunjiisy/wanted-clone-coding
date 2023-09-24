@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-interface productItem {
+export interface productItem {
   id: number
   title: string
   price: number
@@ -9,7 +9,7 @@ interface productItem {
   images: string
 }
 
-async function fetchDatas() {
+async function fetchEventDatas() {
   const res = await fetch('https://dummyjson.com/products')
   if (!res.ok) {
     throw new Error('Failed to fetch data')
@@ -17,7 +17,7 @@ async function fetchDatas() {
   return await res.json()
 }
 export default async function ProductList() {
-  const productsList = await fetchDatas()
+  const productsList = await fetchEventDatas()
 
   return (
     <div className="grid grid-cols-4 gap-y-10 gap-x-4">

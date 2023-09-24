@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import styled from '@emotion/styled'
 import { useModal } from '@/app/components/commons/modal/modal-context-ex'
-import Modal from '@/app/components/commons/modal/modal'
 
 const StyledDiv = styled('div')({
   display: 'flex',
@@ -125,7 +124,6 @@ const SignUpPage = () => {
       >
         회원가입
       </Button>
-      <Modal></Modal>
     </StyledDiv>
   )
 }

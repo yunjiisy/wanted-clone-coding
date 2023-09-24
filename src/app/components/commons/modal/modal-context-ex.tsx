@@ -1,4 +1,5 @@
 'use client'
+import Modal from '@/app/components/commons/modal/modal'
 import React, {
   createContext,
   useReducer,
@@ -64,6 +65,7 @@ export const ModalProvider = ({ children }: ModalProviderProps) => {
   return (
     <ModalContext.Provider value={{ modalInfo, dispatch }}>
       {children}
+      <Modal />
     </ModalContext.Provider>
   )
 }

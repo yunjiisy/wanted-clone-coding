@@ -1,12 +1,10 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app'
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp, getApps, getApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
-import dummy from '../../public/data/jobCardDummy.json'
-import { collection, addDoc } from 'firebase/firestore'
+import { getStorage } from 'firebase/storage'
+import 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: 'AIzaSyBdG4HV2xEGh0cqk450W2-pjHV4oJ1WkOI',
   authDomain: 'wanted-data-c0b53.firebaseapp.com',
@@ -17,6 +15,6 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
-
-export const db = getFirestore(app)
+const app = getApps.length > 0 ? getApp() : initializeApp(firebaseConfig)
+const db = getFirestore(app)
+export { app, db, firebaseConfig }
