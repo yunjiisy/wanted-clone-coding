@@ -1,6 +1,6 @@
 'use client'
 import Carousel from './components/units/carousel'
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signIn, useSession } from 'next-auth/react'
 import Google from '../../public/assets/svg/google-logo.svg'
 
 export default function Home() {
@@ -12,18 +12,10 @@ export default function Home() {
       <Carousel carouselList={carouseImages}></Carousel>
       {status === 'authenticated' ? (
         <div>
-          <div>{session.user?.name}</div>
-          <img src={session.user?.image} alt="member Image" />
-          <div className="flex items-center justify-center bg-slate-50">
-            <button
-              className=" transform rounded-md bg-gray-700 px-4 py-2  text-white transition-colors duration-200 hover:bg-gray-600 "
-              onClick={async () => {
-                await signOut()
-              }}
-            >
-              Sign out with Google
-            </button>
+          <div className="text-xl font-semibold	text-center">
+            하이~! {session.user?.name}
           </div>
+          <div className="flex items-center justify-center bg-slate-50"></div>
         </div>
       ) : (
         <button

@@ -4,6 +4,8 @@ import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import styled from '@emotion/styled'
 import { useModal } from '@/app/components/commons/modal/modal-context-ex'
+import { signIn } from 'next-auth/react'
+import Google from '../../../public/assets/svg/google-logo.svg'
 
 const StyledDiv = styled('div')({
   display: 'flex',
@@ -124,6 +126,13 @@ const SignUpPage = () => {
       >
         회원가입
       </Button>
+      <button
+        className="flex gap-4 h-auto w-64 items-center justify-center rounded-md border border-gray-300 px-4 py-2"
+        onClick={async () => await signIn('google')}
+      >
+        <Google width="25" height="25"></Google>
+        Sign up with Google
+      </button>
     </StyledDiv>
   )
 }

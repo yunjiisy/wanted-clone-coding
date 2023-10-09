@@ -12,6 +12,6 @@ html {
 }
 
 body {
-  min-height: 80vw;
+  position: relative;
   overflow-x: hidden;
 }

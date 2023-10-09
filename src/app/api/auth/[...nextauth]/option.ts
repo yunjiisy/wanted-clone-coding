@@ -4,7 +4,6 @@
 import type { NextAuthOptions } from 'next-auth'
 // import KakaoProvider from 'next-auth/providers/kakao'
 import GoogleProvider from 'next-auth/providers/google'
-// import { FirebaseAdapter } from '@next-auth/firebase-adapter'
 import { FirestoreAdapter } from '@next-auth/firebase-adapter'
 import { cert } from 'firebase-admin/app'
 
@@ -13,7 +12,6 @@ export const options: NextAuthOptions = {
     credential: cert({
       projectId: process.env.FIREBASE_PROJECT_ID,
       clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-      // privateKey: process.env.FIREBASE_PRIVATE_KEY,
       privateKey:
         process.env.FIREBASE_PRIVATE_KEY != null
           ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/gm, '\n')
@@ -30,9 +28,14 @@ export const options: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
   ],
+  callbacks: {
+    async redirect({ url, baseUrl }) {
+      return baseUrl
+    },
+  },
 
-  // pages: {
-  //   // signIn: "/signin"
-  //   // 내가 만든 signin페이지쓰려면 넣어줌. 아니면 auth가 자동으로 만들어줌
-  // }
+  pages: {
+    signIn: 'auth/signin',
+    // 내가 만든 signin페이지쓰려면 넣어줌. 아니면 auth가 자동으로 만들어줌
+  },
 }

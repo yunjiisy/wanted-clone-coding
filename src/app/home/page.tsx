@@ -1,5 +1,4 @@
 // import Image from 'next/image'
-'use client'
 import styles from '@/app/page.module.css'
 
 export default function Home() {

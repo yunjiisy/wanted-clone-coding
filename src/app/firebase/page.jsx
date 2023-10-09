@@ -19,6 +19,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '2',
       },
       {
         id: 2,
@@ -31,6 +33,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '2',
+        filterId: '3',
       },
       {
         id: 3,
@@ -43,6 +47,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '4',
       },
       {
         id: 4,
@@ -55,6 +61,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '2',
+        filterId: '5',
       },
       {
         id: 5,
@@ -67,6 +75,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '6',
       },
       {
         id: 6,
@@ -79,6 +89,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '7',
       },
       {
         id: 7,
@@ -91,6 +103,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '2',
+        filterId: '2',
       },
       {
         id: 8,
@@ -103,6 +117,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '2',
+        filterId: '3',
       },
       {
         id: 9,
@@ -115,6 +131,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '4',
       },
       {
         id: 10,
@@ -127,6 +145,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '2',
+        filterId: '5',
       },
       {
         id: 11,
@@ -139,6 +159,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '7',
       },
       {
         id: 12,
@@ -151,6 +173,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '7',
       },
       {
         id: 13,
@@ -163,6 +187,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '2',
       },
       {
         id: 14,
@@ -175,6 +201,8 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '3',
       },
       {
         id: 15,
@@ -187,8 +215,9 @@ export default function AddDataPage() {
         reward1: '500,000',
         reward2: '500,000',
         growing: 'true',
+        tagId: '1',
+        filterId: '2',
       },
-      // Add more objects as needed
     ]
     //    addDoc(collection(db       , "컬렉션이름") , { 추가할 데이터 }
     for (const data of addData) {

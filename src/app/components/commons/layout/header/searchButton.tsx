@@ -4,7 +4,6 @@ import styled from '@emotion/styled'
 import SvgIcon from '@mui/material/SvgIcon'
 import Search from '@mui/icons-material/Search'
 const Wrapper = styled.div`
-  height: 50px;
   display: flex;
   align-items: center;
 `
