@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 export default function AddDataPage() {
   const [value, setValue] = useState()
+  console(value)
 
   const onClickUpLoadButton = async () => {
     const addData = [

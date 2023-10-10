@@ -1,25 +1,17 @@
 import React from 'react'
-import { signIn } from 'next-auth/react'
-import Google from '../../../../../public/assets/svg/google-logo.svg'
+
 import { getServerSession } from 'next-auth'
 import { options } from '@/app/api/auth/[...nextauth]/option'
-
+import GoogleSigninButton from '@/app/components/commons/layout/header/googleSigninButton'
 const SigninPage = async () => {
   const session = await getServerSession(options)
   if (session) {
     return { redirect: { destination: '/' } }
   }
   return (
-    <div>
+    <div className="relative flex flex-col items-center">
       <h1>로그인</h1>
-
-      <button
-        className="flex gap-4 h-auto w-64 items-center justify-center rounded-md border border-gray-300 px-4 py-2"
-        onClick={async () => await signIn('google')}
-      >
-        <Google width="25" height="25"></Google>
-        Sign in with Google
-      </button>
+      <GoogleSigninButton />
     </div>
   )
 }

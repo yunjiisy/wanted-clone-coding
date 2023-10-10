@@ -10,7 +10,7 @@ items-center
 text-sm
 `
 
-export default function SignupButton(): JSX.Element {
+export default function LogIn(): JSX.Element {
   const { data: session, status } = useSession()
 
   return (
@@ -45,14 +45,11 @@ export default function SignupButton(): JSX.Element {
           <div>/</div>
           <button
             onClick={async () => {
-              await signIn('google')
+              await signIn()
             }}
           >
             로그인
           </button>
-          {/* <Link href="/signin">
-            <div>로그인</div>
-          </Link> */}
         </Wrapper>
       )}
     </>
